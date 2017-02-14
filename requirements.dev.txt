@@ -1,0 +1,8 @@
+-r requirements.txt
+pytest
+pytest-mock
+pylint
+factory_boy
+python-dateutil
+ipython
+ipdb

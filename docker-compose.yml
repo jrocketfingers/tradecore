@@ -1,0 +1,10 @@
+version: "2"
+services:
+  db:
+    image: "postgres"
+    environment:
+      - POSTGRES_USER=tradecore
+      - POSTGRES_PASSWORD=tradecore
+      - POSTGRES_DB=tradecore
+    ports:
+      - "5432:5432"

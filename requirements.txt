@@ -1,0 +1,6 @@
+djangorestframework
+djangorestframework-jwt
+django
+psycopg2
+clearbit
+requests
