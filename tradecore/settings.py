@@ -130,11 +130,18 @@ STATIC_URL = '/static/'
 # Rest framework configuration
 
 REST_FRAMEWORK = {
-    'DEFAULT_PERMISSION_CLASSES': (
-        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
-    ),
+    # 'DEFAULT_PERMISSION_CLASSES': (
+    #     'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    # ),
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.BasicAuthentication',
+        'rest_framework.authentication.SessionAuthentication',
         'rest_framework_jwt.authentication.JSONWebTokenAuthentication',
     )
 }
+
+# Clearbit API key
+# NOTE: This should be put aside into an environment file
+
+CLEARBIT_API_KEY = 'sk_36605fb7ef7836978a20f4d795cf5f7d'
+

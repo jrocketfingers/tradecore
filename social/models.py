@@ -12,7 +12,7 @@ from django.db import models
 
 class UserProfile(models.Model):
     user = models.OneToOneField(User, related_name='user_profile', on_delete=models.CASCADE)
-    enrichment_data = JSONField()
+    enrichment_data = JSONField(null=True)
 
 
 class Post(models.Model):

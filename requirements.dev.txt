@@ -1,6 +1,7 @@
 -r requirements.txt
 pytest
 pytest-mock
+pytest-django
 pylint
 factory_boy
 python-dateutil

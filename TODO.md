@@ -1,0 +1,7 @@
+- pagination
+- refactor bot code, extract steps into separate functions
+- unittest the bot
+- route-level permissions (viewsets are horrible in that regard)
+- object-level permissions (omitted to speed up the development)
+- refresh tokens
+- hunter.io api usage after getting an account

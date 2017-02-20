@@ -1,6 +1,11 @@
 djangorestframework
 djangorestframework-jwt
 django
+django_postgrespool
 psycopg2
 clearbit
-requests
+aiohttp
+aiodns
+cchardet
+pyyaml
+markdown

@@ -26,9 +26,9 @@ from social import views
 # as the names are taken to be valid
 # pylint: disable=invalid-name
 router = routers.DefaultRouter()
-router.register(r'user', views.UserViewSet)
-router.register(r'user_profile', views.UserProfileViewSet)
-router.register(r'post', views.PostViewSet)
+router.register(r'user', views.UserViewSet, base_name='user')
+router.register(r'userprofile', views.UserProfileViewSet, base_name='userprofile')
+router.register(r'post', views.PostViewSet, base_name='post')
 router.register(r'like', views.LikeViewSet, base_name='like')
 
 urlpatterns = [
