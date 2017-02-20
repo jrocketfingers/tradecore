@@ -19,7 +19,7 @@ def test_register_as_a_bot(mock, client, clearbit, user_dict):
     # register a user with an additional bot query param
     response = client.post('/api/v1/user/?bot=true', user_dict)
 
-    assert response.content == 'abc'
+    assert response.status_code == status.HTTP_201_CREATED
 
     # check that the enrichment hasn't been called
     assert not clearbit.called, "Bot should not be calling the API."
@@ -35,7 +35,9 @@ def test_register_as_a_human(mock, client, clearbit, user_dict):
     mock.patch('social.views.UserProfile')
 
     # register a user without the bot query param
-    client.post('/api/v1/user/', user_dict)
+    response = client.post('/api/v1/user/', user_dict)
+
+    assert response.status_code == status.HTTP_201_CREATED
 
     # check that the enrichment api _has_ been called
     assert clearbit.called, "Regular registration should call the API."
